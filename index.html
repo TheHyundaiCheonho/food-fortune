@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>🍚 오늘의 식사 운세</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    #fortune {
+      font-size: 1.5rem;
+      margin: 30px 0;
+      min-height: 3em;
+    }
+    button {
+      background-color: #ffaf2e;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff9300;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍀 오늘의 식사 운세 🍀</h1>
+  <p id="fortune">로딩 중...</p>
+  <button onclick="showFortune()">운세 다시 뽑기</button>
+
+  <script>
+    const fortunes = [
+      "국물 흘리면 연애운 폭등!",
+      "젓가락 떨어뜨리면 숨은 반찬 등장!",
+      "밥풀 붙으면 오늘 대박날 조짐!",
+      "첫 한 입에 감탄하면 복이 들어온다",
+      "반찬 리필 2번 하면 행운도 리필!",
+      "맵찔이지만 먹는다면 용기운 상승!",
+      "마지막 국물까지 먹으면 재물운 GOOD",
+      "식사 후 물 한 잔 = 마음 정화 완료",
+      "김치 먼저 먹으면 집중력 +10",
+      "음식 기다리는 지금, 당신 운세 최고예요!"
+    ];
+
+    function showFortune() {
+      const random = fortunes[Math.floor(Math.random() * fortunes.length)];
+      document.getElementById("fortune").innerText = random;
+    }
+
+    showFortune();
+  </script>
+</body>
+</html>
